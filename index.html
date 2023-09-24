@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fox.css">
+    <title>tiger</title>
+</head>
+
+<body>
+    <div class="total">
+        <div class="mainContainer">
+            <div class="foxcontainer">
+                <img src="g14.png" alt="tiger" class="foxContainer" id="playButton" onclick="audio.play(),imgbtn()">
+                <audio id="sound" src="barking.mp3"></audio>
+            </div>
+            <div class="shinchanContainer">
+                <div class="commentBox">
+                    ohh...! that's a fox <a href="https://en.wikipedia.org/wiki/Fox">click</a> to know more
+                </div>
+                <div class="shinchan">
+                    <img src="shinchan.png" alt="shinchan" id="shinchan">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const audio = new Audio()
+        audio.src = "barking.mp3"
+        let fox = document.getElementById('playButton');
+
+        function imgbtn() {
+            fox.src = 'bg10.png';
+            setTimeout(() => {
+                fox.src = 'g14.png';
+            }, 800);
+        }
+    </script>
+</body>
+
+</html>
